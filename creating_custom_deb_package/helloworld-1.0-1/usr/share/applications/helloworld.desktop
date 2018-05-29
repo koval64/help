@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Hello World
+GenericName=Example deb tutorial.
+Comment=Example hellopackage deb creating tutorial.
+Exec=helloworld
+Icon=helloworld
+Terminal=false
+Type=Application
+Categories=System;Monitor;HardwareSettings;TrayIcon;
+StartupNotify=false

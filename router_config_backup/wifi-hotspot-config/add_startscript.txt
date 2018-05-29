@@ -1,0 +1,9 @@
+Edit your crontab as regular user:
+
+ crontab -e
+
+and create entry like this:
+
+ @reboot /path/to/script.sh
+
+@reboot means it's run when computer starts up

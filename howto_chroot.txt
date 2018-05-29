@@ -1,0 +1,27 @@
+
+### how to chroot, simple and fast ###
+
+Pick up a liveCD, version doesn't matter,
+use any distro, as long as it ables you to enter to console.
+
+1. Run with root or sudo than Create a mountpoint
+# mkdir /mount_point
+
+2. Mount filesystem
+# mount /dev/sdb1 /mount_point
+
+3. Mount /proc /sys /dev to chroot
+# mount -o bind /proc /mount_point/proc
+# mount -o bind /dev /mount_point/dev
+# mount -o bind /dev/pts /mount_point/dev/pts
+# mount -o bind /sys /mount_point/sys
+
+4. Copy resolv.conf to networking
+# cp /etc/resolv.conf /mount_point/etc/resolv.conf
+
+5.Open bash in chroot
+# chroot /mount_point /bin/bash
+
+6. Do what you have to do and then exit chroot
+# exit
+

@@ -1,0 +1,12 @@
+
+
+#to see login session id
+loginctl
+
+#and then
+loginctl show-session <SESSION_ID> -p Type
+
+
+#example:
+loginctl show-session 2 -p Type
+

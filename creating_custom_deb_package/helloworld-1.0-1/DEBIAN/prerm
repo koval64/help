@@ -1,0 +1,4 @@
+#!/bin/bash
+
+systemctl stop helloworld-daemon.service
+systemctl disable helloworld-daemon.service

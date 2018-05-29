@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pushd "/home/username/Programs/gfxbench_gl-linux-qt-4.0.13+community"
+./start.sh "$@"
+popd

@@ -1,0 +1,8 @@
+ts3 radio
+
+1. pactl load-module module-null-sink sing_nam=<name>
+2. now: pavucontrol
+
+ or
+
+sudo modprobe snd_aloop

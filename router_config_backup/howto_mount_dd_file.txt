@@ -1,0 +1,2 @@
+file -k sd-card-backup.dd
+mount -o ro,loop,offset=75497472 sd-card-backup.dd tmproot/

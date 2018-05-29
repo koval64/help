@@ -1,0 +1,15 @@
+/^Bus/ {
+        curdev = $0;
+}
+/iManufacturer/ {
+        curman = $2
+}
+/iProduct/ {
+        curprod = $2
+}
+/bInterfaceNumber/ {
+        curiface = $2
+}
+/19d2:2000/ {
+        printf "%s iM=%s iP=%s if=%s\n",curdev,curman,curprod,curiface;
+}

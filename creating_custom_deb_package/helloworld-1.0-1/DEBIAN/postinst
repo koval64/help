@@ -1,0 +1,4 @@
+#!/bin/bash
+
+systemctl enable helloworld-daemon.service
+systemctl start helloworld-daemon.service

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=4.7.1
+Name=Eclipse Oxygen
+GenericName=Eclipse Oxygen
+Categories=Utility
+Icon=/home/username/Programs/java-oxygen/eclipse/icon.xpm
+Exec=oxygen

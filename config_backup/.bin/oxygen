@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pushd "/home/username/Programs/java-oxygen/eclipse"
+./eclipse "$@"
+popd

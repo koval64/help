@@ -1,0 +1,15 @@
+first path:
+/sys/devices/pci0000\:00/0000\:00\:01.0/0000\:01\:00.0/pp_*
+
+second path:
+/sys/class/drm/card0/device/pp_*
+
+
+status:
+pp_dpm_pcie
+pp_dpm_sclk
+pp_dpm_mclk
+
+oveclock:
+pp_sclk_od
+pp_mclk_od

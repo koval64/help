@@ -1,0 +1,8 @@
+launch options:
+
+glxosd --steam %command%
+
+
+or with libstdc++ hack:
+
+LD_PRELOAD='/usr/$LIB/libstdc++.so.6' glxosd --steam %command%

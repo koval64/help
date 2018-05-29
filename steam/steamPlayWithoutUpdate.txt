@@ -1,0 +1,16 @@
+This thread is a bit old but I'll post the solution here anyway:
+
+0. Make sure to have steam closed before you begin and just to be safe go into your downloads tab in steam, pause and delete the update for the game you want to play
+
+1. Go into your steamapps folder, you should see a bunch of .ACF files labelled 'steammanifest_(the game id number here)'
+
+2. Locate the ACF file for your game, you should be able to identify it by googling '[game name] steam id', or simply opening it up in a text editor like notepad and looking at the text after "name"
+
+3. Once you've found the relevant ACF file open it up in a text editor simply change the number after "StateFlags" to 4
+
+4. Now change the number after "UpdateResult" to 0
+
+5. Open Steam in offline mode and your game should now be playable, enjoy!
+
+
+Just keep in mind that you'll likely have to repeat this process if you open Steam in online mode at some point. If you don't want this to happen go into the properties window for your game, go to the updates tab and change the 'automatic updates' option to 'don't automatically update this game'. 

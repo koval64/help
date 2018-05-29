@@ -1,0 +1,11 @@
+[Unit]
+Description=helloworld daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/helloworld-daemon
+ExecStop=/usr/bin/killall helloworld-daemon
+ExecReload=/usr/bin/killall helloworld-daemon && /usr/bin/helloworld-daemon
+
+[Install]
+WantedBy=multi-user.target

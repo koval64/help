@@ -1,0 +1,11 @@
+
+# qrencode
+#
+# -l {LMQH}, --level={LMQH}
+#        specify error collectin level from L (lowest) to H (highest).
+#        (default=L)
+#
+
+cat filename.txt | qrencode -o filename.png -lM
+
+qrencode -o text.png 'text to convert to qr code'

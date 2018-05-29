@@ -1,0 +1,22 @@
+
+############################################################
+### Re-encode the video and stream copy the audio.       ###
+### The output should be a similar quality as the        ###
+### input and will hopefully be a more manageable size.  ###
+###                                                      ###
+### if you don't have ffmpeg - change ffmpeg with avconv ###
+############################################################
+
+avconv -i level_18.mp4 -c:v libx264 -preset slow -crf 18 -c:a copy -pix_fmt yuv420p level_18.mkv
+
+#############################################################################
+# Same as above, but also re-encode the audio instead of stream copying it: #
+#############################################################################
+
+ffmpeg -i input.mov -c:v libx264 -preset slow -crf 18 -c:a libvorbis -q:a 5 -pix_fmt yuv420p output.mkv
+
+################################################################################
+# Create a video with a still image (input.png) and an audio file (audio.ogg): #
+################################################################################
+
+ffmpeg -loop 1 -framerate 2 -i input.png -i audio.ogg -c:v libx264 -preset medium -tune stillimage -crf 18 -c:a copy -shortest -pix_fmt yuv420p output.mkv

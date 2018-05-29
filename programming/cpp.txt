@@ -1,0 +1,60 @@
+
+
+NUMERAL SYSTEMS
+
+75         // decimal
+0113       // octal
+0x4b       // hexadecimal
+
+VARIABLE TYPES
+
+75         // int
+75u        // unsigned int
+75l        // long
+75ul       // unsigned long
+
+3.14159L   // long double
+6.02e23f   // float
+
+
+SPECIAL CHARACTERS
+
+\n	newline
+\r	carriage return
+\t	tab
+\v	vertical tab
+\b	backspace
+\f	form feed (page feed)
+\a	alert (beep)
+\'	single quote (')
+\"	double quote (")
+\?	question mark (?)
+\\	backslash (\)
+
+'\n'
+'\t'
+"Left \t Right"
+"one\ntwo\nthree"
+
+"string expressed in \
+two lines" 
+
+"this forms" "a single" "string" "of characters"
+
+Finally, if we want the string literal to be explicitly 
+made of wide characters (wchar_t), instead of narrow characters (char),
+we can precede the constant with the L prefix:
+
+L"This is a wide character string"
+
+Wide characters are used mainly to represent non-English
+or exotic character sets.
+
+DEFINED CONSTANTS (#define)
+
+#define identifier value
+
+    For example:
+
+	#define PI 3.14159265
+	#define NEWLINE '\n'

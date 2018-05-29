@@ -1,0 +1,13 @@
+
+# identify the adapter your video card is associated with:
+sudo atiflash -i
+
+# now save the BIOS image from adapter you identified earlier with:
+sudo atiflash -s <Num> <File> [Size]
+
+# modify with PolarisBiosEditor
+
+# flash the GPU with the modified BIOS image
+sudo atiflash -p <Num> <File>
+
+# if successful reboot your machine for the changes to take effect

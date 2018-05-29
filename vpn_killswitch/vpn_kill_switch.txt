@@ -1,0 +1,33 @@
+sudo apt install ufw
+sudo ifconfig
+
+# After you’ve ensured that your VPN is using tun0, disconnect from it, and copy
+# and paste this into your favourite text editor, before saving it as your
+# filename of choice (such as firewall.sh) in your home folder:
+
+
+#!/bin/bash
+
+sudo ufw reset
+sudo ufw default deny incoming
+sudo ufw default deny outgoing
+sudo ufw allow out on tun0 from any to any
+sudo ufw enable
+
+
+# What this script does is reset all your ufw firewall rules, and then change
+# them to only allow traffic to go in or out on tun0. Of course, you’ll
+# eventually need to undo this. For that, you’ll want to copy and paste the
+# following into a text editor as well, and save it in your home folder
+# (I called mine unfirewall.sh):
+
+
+#!/bin/bash
+
+sudo ufw reset
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
+
+
+

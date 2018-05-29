@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=3.1.5
+Name=TeamSpeak 3
+GenericName=TeamSpeak 3
+Categories=Utility
+Icon=teamspeak3
+Exec=/home/username/.bin/teamspeak

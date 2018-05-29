@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=4.0.0
+Name=GFXBench GL
+GenericName=GFXBench
+Categories=Utility
+Icon=/home/username/Programs/gfxbench_gl-linux-qt-4.0.13+community/gfxbench_gl.png
+Exec=/home/username/.bin/gfxbench

@@ -1,0 +1,29 @@
+
+# install ruby1.8 & friends with priority 500
+# so this will be the default "auto" choice
+update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.8 500 \
+                    --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
+                                  /usr/share/man/man1/ruby.1.8.gz \
+                    --slave   /usr/bin/ri ri /usr/bin/ri1.8 \
+                    --slave   /usr/bin/irb irb /usr/bin/irb1.8 
+
+# install ruby1.9 & friends with priority 400
+update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9 400 \
+                    --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
+                                   /usr/share/man/man1/ruby.1.9.gz \
+                    --slave   /usr/bin/ri ri /usr/bin/ri1.9 \
+                    --slave   /usr/bin/irb irb /usr/bin/irb1.9 
+
+# choose your interpreter 
+# changes symlinks for /usr/bin/ruby , 
+# /usr/bin/irb, /usr/bin/ri and man (1) ruby
+update-alternatives --config ruby 
+
+
+
+
+#
+# to remove
+#
+
+sudo update-alternatives --remove-all ruby
