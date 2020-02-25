@@ -20,7 +20,7 @@ git status
 # add all new files
 git add .
 
-# add new files to repository
+# add description to all new files
 git commit -m "some description to newly added files"
 git status
 
