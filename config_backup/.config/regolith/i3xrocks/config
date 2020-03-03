@@ -31,7 +31,7 @@ label_color=xresource:i3xrocks.label.color
 
 [crypto]
 #markup=pango
-#lable=
+#label=
 interval=60
 instance=bitcoin
 #instance=ontology
