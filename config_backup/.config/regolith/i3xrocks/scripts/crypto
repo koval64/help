@@ -14,6 +14,11 @@ coin = os.environ.get('BLOCK_INSTANCE', 'bitcoin')
 r = requests.get(API_URL.format(coin))
 data = json.loads(r.text)[0]
 
+
+if coin == 'bitcoin':
+    data['symbol'] = ''
+
+
 base = 'usd'
 if len(sys.argv) > 1: base = sys.argv[1]
 
@@ -32,7 +37,9 @@ if percentChange > 0: percentChangeInfo = percentChangeFormat.format('#3BB92D', 
 elif percentChange == 0: percentChangeInfo = percentChangeFormat.format('#CCCCCC', '', percentChange)
 else: percentChangeInfo = percentChangeFormat.format('#F7555E', '', percentChange)
 
-print(('{} {:.' + str(precision) + 'f} {}').format(data['symbol'], price, percentChangeInfo)) # Full Text
+font_name='Source Code Pro Medium 13'
+
+print(('{} <span font_desc="{}">{:.' + str(precision) + 'f} {}</span>').format(data['symbol'], font_name, price, percentChangeInfo)) # Full Text
 print(('{} {:.' + str(precision) + 'f}').format(data['symbol'], price)) # Short Text
 
 if percentChange > PRICE_CHANGE_URGENT_PERCENT:

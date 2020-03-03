@@ -281,9 +281,9 @@ font $i3-wm.bar.font
 # The bar configuration
 bar {
   font "pango:Source Code Pro Medium 13, FontAwesome 13"
-#  separator_symbol " "
+  separator_symbol "/"
   status_command i3xrocks -c $i3xrocks_config
-  tray_output none
+  tray_output primary
 
   colors {
       background $i3-wm.bar.background.color
@@ -299,7 +299,7 @@ bar {
 }
 
 # GENERAL LAYOUT
-#assign [class="Firefox"] $ws2
+assign [class="Firefox"] $ws2
 assign [class="Godot"]   $ws3
 assign [class="Steam"]   $ws4
 assign [class="discord"] $ws5
@@ -338,6 +338,8 @@ for_window [class="Org.gnome.Nautilus" instance="org.gnome.Nautilus"] floating e
 for_window [class="Org.gnome.gedit" instance="org.gnome.gedit"] floating enable
 for_window [class="Gnome-control-center" instance="gnome-control-center"] floating enable
 for_window [class="Grub-customizer" instance="grub-customizer"] floating enable
+for_window [class="Gtk-recordmydesktop" instance="gtk-recordmydesktop"] floating enable
+for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable
 for_window [title="Meteorogramy - meteorograms - Mozilla Firefox"] floating enable
 
 # The following exec calls run programs in the background when i3 starts.

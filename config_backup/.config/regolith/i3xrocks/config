@@ -28,17 +28,21 @@ markup=pango
 color=xresource:i3xrocks.value.color
 label_color=xresource:i3xrocks.label.color
 
+
 [crypto]
 #markup=pango
+#lable=
 interval=60
 instance=bitcoin
 #instance=ontology
 command=$HOME/.config/regolith/i3xrocks/scripts/crypto
 
+
 [disc]
 label=
 interval=30
 command=$HOME/.config/regolith/i3xrocks/scripts/disk
+
 
 # Network manager VPN
 #
@@ -93,9 +97,10 @@ command=$HOME/.config/regolith/i3xrocks/scripts/disk
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-#label=
+label=
 interval=5
 min_width=100%
+command=$HOME/.config/regolith/i3xrocks/scripts/cpu_usage
 
 # Battery indicator
 #
